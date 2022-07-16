@@ -32,11 +32,10 @@ jobs:
           run: python -c "import sys; print(sys.version)"
           # Install the package using the setup.py
           # Install pytest (you can use some other testing utility)
-        - name: Install unittest
+        - name: Update Python
           run: |
             cd $GITHUB_WORKSPACE
             python -m pip install --upgrade pip
-            pip install calc
             
             
         - name: Run Tests
