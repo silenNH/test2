@@ -195,7 +195,6 @@ Resources:
         "--DataBase1": !FindInMap [DatabaseNameMap, !Ref Environmentval, database]
         "--bucket": !Ref DataBucket
         "--env": !Ref Environmentval
-      MaxRetries: 0
       Name: !Join ["-", [!Ref Environmentval , "JobProcessingTweets"]] 
       Role: !Ref RoleProcessingTweets
 
