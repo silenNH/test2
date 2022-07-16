@@ -29,5 +29,5 @@ class TestCalc(unittest.TestCase):
             calc.divide(10, 0)
 
 
-if __name__ == '__main__':
-    unittest.main()
+#if __name__ == '__main__':
+#    unittest.main()
