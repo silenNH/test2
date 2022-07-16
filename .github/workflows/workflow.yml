@@ -57,7 +57,7 @@ jobs:
         - name: Check coverage tolerance
           env:
             MY_KEY: ${{ secrets.TEST_SECRET }}
-          if: "${{ env.MY_KEY = '' }}"
+          if: "${{ env.MY_KEY == '' }}"
           uses: actions/github-script@v3
           with:
           script: |
