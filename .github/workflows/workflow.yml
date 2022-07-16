@@ -53,3 +53,12 @@ jobs:
           run: |
             cfn-lint --version
             cfn-lint -t Lambda_GlueWorkflow_deploy.yml
+
+        - name: Check coverage tolerance
+          env:
+            MY_KEY: ${{ secrets.TEST_SECRET }}
+          if: "${{ env.MY_KEY = '' }}"
+          uses: actions/github-script@v3
+          with:
+          script: |
+            core.setFailed('TEST_SECRET is empty')
