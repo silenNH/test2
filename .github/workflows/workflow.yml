@@ -41,7 +41,7 @@ jobs:
             
         - name: Run Tests
           run: | 
-            python -m unittest .\test_calc
+            python -m unittest test_calc.py
             echo "unittest is installed"
           # Run the tests. I'm using pytest and the file is in the tests directory.
         #- name: Run tests
