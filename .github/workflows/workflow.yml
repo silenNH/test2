@@ -60,5 +60,5 @@ jobs:
           if: "${{ env.MY_KEY == '' }}"
           uses: actions/github-script@v3
           with:
-          script: |
-            core.setFailed('TEST_SECRET is empty')
+            script: |
+              core.setFailed('TEST_SECRET is empty')
